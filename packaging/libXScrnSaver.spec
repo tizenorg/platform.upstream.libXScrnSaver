@@ -18,7 +18,6 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xextproto)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 %description
 The X Window System provides support for changing the image on a
