@@ -69,6 +69,7 @@ make %{?_smp_mflags}
 
 %files -n %lname
 %defattr(-,root,root)
+%license COPYING
 %{_libdir}/libXss.so.1*
 
 %files devel
