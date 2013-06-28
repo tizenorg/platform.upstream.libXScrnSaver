@@ -10,6 +10,7 @@ Group:          Development/Libraries/C and C++
 #Git-Clone:	git://anongit.freedesktop.org/xorg/lib/libXScrnSaver
 #Git-Web:	http://cgit.freedesktop.org/xorg/lib/libXScrnSaver/
 Source:         %{name}-%{version}.tar.bz2
+Source1001: 	libXScrnSaver.manifest
 #git#BuildRequires:	autoconf >= 2.60, automake, libtool
 BuildRequires:  fdupes
 BuildRequires:  pkgconfig
@@ -54,6 +55,7 @@ in %lname.
 
 %prep
 %setup -q
+cp %{SOURCE1001} .
 
 %build
 %configure --disable-static
@@ -68,11 +70,13 @@ make %{?_smp_mflags}
 %postun -n %lname -p /sbin/ldconfig
 
 %files -n %lname
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %license COPYING
 %{_libdir}/libXss.so.1*
 
 %files devel
+%manifest %{name}.manifest
 %defattr(-,root,root)
 %{_includedir}/X11/*
 %{_libdir}/libXss.so
