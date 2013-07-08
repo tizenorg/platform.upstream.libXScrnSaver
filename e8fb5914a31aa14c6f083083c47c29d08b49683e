@@ -1,0 +1,8 @@
+Change-Id: Ie8fb5914a31aa14c6f083083c47c29d08b49683e
+Code-Review+2: Ryan Ware <ware@linux.intel.com>
+Verified+1: Ryan Ware <ware@linux.intel.com>
+Submitted-by: Ryan Ware <ware@linux.intel.com>
+Submitted-at: Mon, 08 Jul 2013 09:39:55 -0700
+Reviewed-on: https://review.tizen.org/gerrit/4841
+Project: platform/upstream/libXScrnSaver
+Branch: refs/heads/tizen
