@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           libXScrnSaver
 %define lname	libXss
 Version:        1.2.2
@@ -19,6 +21,10 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xext)
 BuildRequires:  pkgconfig(xextproto)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 The X Window System provides support for changing the image on a
